@@ -1,1 +1,1 @@
-
+var applejuice = 'apple juice';
